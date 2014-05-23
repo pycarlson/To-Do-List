@@ -9,7 +9,6 @@ describe Task do
 
   context "add model validations" do
     it {should validate_presence_of :to_do}
-    it {should validate_presence_of :status}
   end
 
 end

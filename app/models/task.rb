@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
 
-  validates :to_do, :status, presence: true
+  validates :to_do, presence: true
 
 end
