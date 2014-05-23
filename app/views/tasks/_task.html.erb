@@ -1,0 +1,9 @@
+<li id="<%= @task.id %>">
+  <%= check_box_tag :status, :checked => @task.status %>
+        <p><%= @task.to_do %></p>
+        <div class="links">
+          <%= link_to "Edit", edit_task_path(@task), class: "edit_link" %> 
+          <%= link_to "X", @task, method: :delete, class: "delete_link", remote: true %>
+        </div>
+</div>
+</li>
