@@ -63,14 +63,12 @@ body {
           border: 1px solid #A9A9A9;
           border-radius: 0 !important;
           margin-right: 10px;
-          -moz-appearance:none;
-          -webkit-appearance:none;
-          -o-appearance:none;
+          color: transparent;
           cursor: pointer;
           float: left;
         }
       }
-      form {
+      #new_task {
         width: 500px;
         padding: 20px 15px;
         border-bottom: 1px solid #A9A9A9;
