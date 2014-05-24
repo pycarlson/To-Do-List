@@ -16,7 +16,7 @@ class TasksController < ApplicationController
       format.js
     end
   end
-  
+
   def destroy
     @task = Task.destroy(params[:id])
     respond_to do |format|
@@ -24,6 +24,16 @@ class TasksController < ApplicationController
       format.js
     end
   end
+
+  def toggle
+  @task = Task.find(params[:id])
+
+  if @task.update_attributes(:status => params[:status])
+    # ... update successful
+  else
+    # ... update failed
+  end
+end
 
   private
 
