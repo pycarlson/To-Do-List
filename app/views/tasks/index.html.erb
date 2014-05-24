@@ -4,9 +4,9 @@
     <ul>
       <% @tasks.each do |task| %>
       <li>
-        <form>
-        <%= check_box_tag task.id, task.status, {:checked => "checked"}  %>
-      </form>
+        <%= form_for task do |f| %>
+        <%= f.check_box :status, :onclick => "status"%>
+        <% end %>
         <p><%= task.to_do %></p>
         <div class="links">
           <%= link_to "X", task, method: :delete, class: "delete_link", remote: true %>
