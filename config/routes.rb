@@ -1,7 +1,7 @@
 ToDo::Application.routes.draw do
   root :to => "tasks#index"
   
-  resources :tasks, except: [:edit, :update, :show]
+  resources :tasks
 
-  post '/tasks/:id/toggle' => 'tasks#toggle'
+  put '/tasks/:id/toggle' => 'tasks#toggle'
 end

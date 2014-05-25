@@ -4,29 +4,18 @@ $(document).ready(function() {
     if (this.checked){
       $.ajax({
         url: '/tasks/'+this.value+'/toggle',
-        type: 'POST',
-        data: {"status": true}
+        type: 'PUT',
+        data: {"status": true},
       });
+
     }
     else {
      $.ajax({
       url: '/tasks/'+this.value+'/toggle',
-      type: 'POST',
+      type: 'PUT',
       data: {"status": false}
     });
    }
  });
-
-
- 
-
-  // $('form').on('submit', function(e){
-
-  //   e.preventDefault();
-  //   $('form')[0].reset();
-  //   console.log($('form').length);
-    
-  // });
-
   
 });
